@@ -1,3 +1,6 @@
+import lombok.Data;
+
+@Data
 public class CartaoCredito {
     private Conta cc;
     private String numero;
@@ -9,22 +12,6 @@ public class CartaoCredito {
         this.numero = numero;
         this.limite = limite;
     }
-
-    public double getLimite() {
-		return limite;
-	}
-
-	public double getFatura() {
-		return fatura;
-	}
-
-    public String getNumero() {
-		return numero;
-	}
-
-    public Conta getCc() {
-		return cc;
-	}
 
     public boolean realizarPagamento(double valor) {
         if (valor <= limite) {
